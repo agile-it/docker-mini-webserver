@@ -1,9 +1,9 @@
-FROM mhart/alpine-node:8
-	
+FROM node:8-alpine
+
 RUN mkdir -p /app && mkdir -p /app/public
 
-ADD package.json /app/package.json 
-ADD mini-webserver.js /app/mini-webserver.js
+COPY package.json /app/package.json
+COPY mini-webserver.js /app/mini-webserver.js
 
 RUN cd /app && npm install
 
