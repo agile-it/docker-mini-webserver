@@ -3,7 +3,7 @@ function checkURL(url: string) : string {
     request = new XMLHttpRequest();
 
     // false equals to sync request
-    request.open('HEAD', url, false);
+    request.open('GET', url, false);
     try {
         request.send();
     }
