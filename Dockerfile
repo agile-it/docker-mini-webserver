@@ -4,6 +4,8 @@ RUN mkdir -p /app && mkdir -p /app/public
 
 COPY package.json /app/package.json
 COPY mini-webserver.js /app/mini-webserver.js
+COPY index.html /app/public/
+COPY check.js /app/public/
 
 RUN cd /app && npm install
 
