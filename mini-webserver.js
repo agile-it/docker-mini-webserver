@@ -6,6 +6,13 @@ var host = process.env.HOST || "0.0.0.0";
 
 app.use(express.static(__dirname + '/public'));
 
+app.use(function (req, res, next) {
+  if (req.hostname !== "web.piccocloud.de") {
+    res.append("Location","https://web.piccocloud.de");
+    res.status(302).end();
+  }
+});
+
 app.use(function(req, res, next) {
   res.status(404).end();
 });
