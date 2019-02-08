@@ -6,7 +6,7 @@ var host = process.env.HOST || "0.0.0.0";
 
 
 app.use(function (req, res, next) {
-  var domain = document.location.hostname;
+  var domain = req.hostname;
   domain = domain.substring(domain.indexOf('.') + 1);
 
   if (req.hostname !== "www."+domain) {
