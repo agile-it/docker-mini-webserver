@@ -8,7 +8,7 @@ class entry {
         domain = domain.substring(domain.indexOf('.')+1);
         let i = url.indexOf(".");
         this.url = url.substr(0,i+1)+domain+url.substr(i+1);
-        console.log(this.url);
+        console.log(this.url + " : " + this.name);
     }
 }
 

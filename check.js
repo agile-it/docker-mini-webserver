@@ -5,7 +5,7 @@ var entry = /** @class */ (function () {
         domain = domain.substring(domain.indexOf('.') + 1);
         var i = url.indexOf(".");
         this.url = url.substr(0, i + 1) + domain + url.substr(i + 1);
-        console.log(this.url);
+        console.log(this.url + " : " + this.name);
     }
     return entry;
 }());
