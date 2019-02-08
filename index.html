@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Devserver</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<script src="check.js"></script>
-<ul id="list">
-</ul>
 
+<h1 ALIGN="center">Welcome the DevServer Infrastructure</h1>
+
+<h3 ALIGN="center">please choose from the following apps:</h3>
+
+<div align="center">
+    <ul align="left" id="list">
+    </ul>
+</div>
+<script src="check.js"></script>
 <script>
-   checkURLs([
-       new entry("Wekan","https://wekan."),
-       new entry("Redmine","https://redmine."),
-       new entry("GitLab","https://gitlab./users/sign_in"),
-       new entry("Sonar","https://sonar.")
-   ]);
+    checkURLs([
+        new entry("Wekan", "https://wekan."),
+        new entry("Redmine", "https://redmine."),
+        new entry("GitLab", "https://gitlab./users/sign_in"),
+        new entry("Sonar", "https://sonar."),
+        new entry("Rocket Chat", "https://chat.")
+    ]);
 </script>
 
 
