@@ -6,8 +6,11 @@ var host = process.env.HOST || "0.0.0.0";
 
 
 app.use(function (req, res, next) {
-  if (req.hostname !== "www.piccocloud.de") {
-    res.append("Location","https://www.piccocloud.de");
+  var domain = document.location.hostname;
+  domain = domain.substring(domain.indexOf('.') + 1);
+
+  if (req.hostname !== "www."+domain) {
+    res.append("Location","https://www."+domain);
     res.status(302).end();
   }
   next();

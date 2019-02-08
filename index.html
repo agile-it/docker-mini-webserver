@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Devserver</title>
 </head>
 <body>
-<script src="check.js">
-
-</script>
+<script src="check.js"></script>
 <ul id="list">
-
 </ul>
 
 <script>
-   checkURLs(["https://wekan.piccocloud.de","https://redmine.piccocloud.de",
-        "https://gitlab.piccocloud.de/users/sign_in","https://sonar.piccocloud.de",]);
+   checkURLs([
+       new entry("Wekan","https://wekan."),
+       new entry("Redmine","https://redmine."),
+       new entry("GitLab","https://gitlab./users/sign_in"),
+       new entry("Sonar","https://sonar.")
+   ]);
 </script>
 
 
