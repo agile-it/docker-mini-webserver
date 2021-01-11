@@ -1,4 +1,4 @@
-FROM node:8-alpine
+FROM node:lts-alpine3.10
 
 RUN mkdir -p /app && mkdir -p /app/public
 
